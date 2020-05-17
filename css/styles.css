@@ -1,0 +1,186 @@
+@font-face {
+  font-family: 'FjallaOne';
+  font-style: normal;
+  font-display: swap;
+  src: local("Fjalla-One"), local("Fjalla-One"), url("../fonts/FjallaOne-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Finition';
+  font-style: normal;
+  font-display: swap;
+  src: local("Finition"), local("Finition"), url("../fonts/Finition.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'BoxedHeavy';
+  font-style: normal;
+  font-display: swap;
+  src: local("BoxedHeavy"), local("BoxedHeavy"), url("../fonts/BoxedHeavy.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'BoxedHeavyItalic';
+  font-style: italic;
+  font-display: swap;
+  src: local("BoxedHeavy-Italic"), local("BoxedHeavy"), url("../fonts/BoxedHeavy-Italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'GlossAndBloom';
+  font-style: normal;
+  font-display: swap;
+  src: local("Gloss_And_Bloom"), local("Gloss_And_Bloom"), url("../fonts/Gloss_And_Bloom.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'AntennaBlack';
+  font-style: normal;
+  font-display: swap;
+  src: local("Antenna-Black"), local("Antenna-Black"), url("../fonts/Antenna-Black.woff2") format("woff2");
+}
+body, html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: url("../images/transparency.jpg") repeat;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.clear {
+  clear: both;
+}
+.clear:before, .clear:after {
+  content: "";
+  display: table;
+  line-height: 0;
+}
+.clear:after {
+  clear: both;
+}
+
+.canvasInnerContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.fontPreload {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.siteContent, .siteContent > * {
+  height: 100%;
+}
+.siteContent .controlsContainer {
+  position: relative;
+  float: right;
+  width: 250px;
+  background: white;
+  box-shadow: -1px 0px 3px rgba(0, 0, 0, 0.1);
+}
+.siteContent .controlsContainer .controlsInner {
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.siteContent .controlsContainer .input {
+  padding: 5px 10px;
+  width: 100%;
+  border-radius: 4px;
+  border: 0;
+  background-color: #eee;
+  color: black;
+  text-shadow: 1px 1px 0 white;
+  font-size: 16px;
+  box-sizing: border-box;
+  outline: none;
+}
+.siteContent .controlsContainer .controlContainer {
+  padding: 20px;
+  position: relative;
+  display: block;
+  border-bottom: 1px dotted #ddd;
+  text-decoration: none;
+}
+.siteContent .controlsContainer .controlContainer .label {
+  padding-bottom: 2px;
+  line-height: 1em;
+  font-size: 10px;
+  color: #aaa;
+  text-transform: uppercase;
+}
+.siteContent .controlsContainer .controlContainer .colorPicker {
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 20px;
+  height: 100%;
+  box-sizing: border-box;
+}
+.siteContent .controlsContainer .controlContainer .button {
+  padding: 0 16px;
+  position: relative;
+  display: block;
+  height: 36px;
+  line-height: 36px;
+  font-size: .875rem;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #5f6368;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  background-color: #1a73e8;
+  cursor: pointer;
+}
+.siteContent .controlsContainer .controlContainer .button:hover {
+  box-shadow: 0 1px 2px 0 rgba(26, 115, 232, 0.451), 0 1px 3px 1px rgba(26, 115, 232, 0.302);
+  background-color: #297be6;
+}
+.siteContent .canvasContainer {
+  overflow: hidden;
+  position: relative;
+}
+
+.relative {
+  position: relative;
+}
+
+.loaderContainer {
+  display: none;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 4px;
+}
+.loaderContainer .loaderProgress {
+  height: 100%;
+  background-color: #1a73e8;
+  animation: loading 2s ease-in-out forwards infinite;
+}
+@keyframes loading {
+  0% {
+    width: 100%;
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
