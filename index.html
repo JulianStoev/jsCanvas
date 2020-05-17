@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Sociossports</title>
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    
+    <body>
+        <div class="fontPreload" style="font-family: FjallaOne;">&nbsp;</div>
+        <div class="fontPreload" style="font-family: Finition;">&nbsp;</div>
+        <div class="fontPreload" style="font-family: BoxedHeavy;">&nbsp;</div>
+        <div class="fontPreload" style="font-family: BoxedHeavyItalic;">&nbsp;</div>
+        <div class="fontPreload" style="font-family: GlossAndBloom;">&nbsp;</div>
+        <div class="fontPreload" style="font-family: AntennaBlack;">&nbsp;</div>
+
+        <div class="siteContent clear">
+            <div class="controlsContainer">
+                <div class="controlsInner">
+                    <div class="controlContainer">
+                        <div class="label">Text 1</div>
+                        <input type="text" class="input textInput" value="I think team first." id="1" data-type="text" />
+                    </div>
+                    <div class="controlContainer">
+                        <div class="label">Text 2</div>
+                        <input type="text" class="input textInput" value="It allows me" id="2" data-type="text" />
+                    </div>
+                    <div class="controlContainer">
+                        <div class="label">Text 3</div>
+                        <input type="text" class="input textInput" value="to succeed" id="3" data-type="text" />
+                    </div>
+                    <div class="controlContainer">
+                        <div class="label">Text 4</div>
+                        <input type="text" class="input textInput" value="- Lebron James -" id="4" data-type="text" />
+                    </div>
+                    <div class="controlContainer">
+                        <div class="label">Canvas background</div>
+                        <div class="relative">
+                            <input type="text" class="input textInput" value="#052536" id="fillStyle" data-type="fillStyle" />
+                            <input type="color" class="colorPicker" value="#052536" id="fillStylePicker" data-type="fillStyle" />
+                        </div>
+                    </div>
+                    <div class="controlContainer">
+                        <div class="label">Inner border width / hit enter</div>
+                        <input type="text" class="input textInput" value="5" id="border" data-type="lineWidth" />
+                    </div>
+                    <div class="controlContainer">
+                        <div class="label">Inner border color</div>
+                        <div class="relative">
+                            <input type="text" class="input textInput" value="#0a4464" id="strokeStyle" data-type="strokeStyle" />
+                            <input type="color" class="colorPicker" value="#0a4464" id="strokeStylePicker" data-type="strokeStyle" />
+                        </div>
+                    </div>
+                    <div class="controlContainer">
+                        <div class="label">Shine color</div>
+                        <div class="relative">
+                            <input type="text" class="input textInput" value="#00a8ff" id="addColorStop" data-type="addColorStop" />
+                            <input type="color" class="colorPicker" value="#00a8ff" id="addColorStopPicker" data-type="addColorStop" />
+                        </div>
+                    </div>
+                    <div class="controlContainer">
+                        <a class="button" onclick="t.download(this, 'mainCanvas', 'lebron.png');">Download</a>
+                    </div>
+                </div>
+            </div>
+            <div class="canvasContainer">
+                <div class="canvasInnerContainer">
+                    <canvas id="mainCanvas">Your browser does not support the HTML5 canvas tag.</canvas>
+                    <div id="loading" class="loaderContainer">
+                        <div class="loaderProgress"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/template.js"></script>
+    </body>
+</html>
